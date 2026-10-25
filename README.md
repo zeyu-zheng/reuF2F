@@ -120,7 +120,7 @@ If you find our work helpful, please use the following citation.
 @article{zheng2026reuf2f,
   title={ReuF2F: Benchmarking coding agents on formalized undergraduate research problems},
   author={Zheng, Zeyu and Liu, Yiyang and Zhao, Yuyang and Zheng, Congmin and Zhu, Jiachen and Chen, Jianian and Zhang, Kangning and Wong, Kayue Daniel and Yang, Lingyu and Shan, Rong and Chen, Shihao and Zhu, Thomas and Zhang, Wentao and Li, Xiaopeng and Hu, Yan and Lin, Yongxi and Chen, Yuxiang and Ou, Zhuoying and Lin, Jianghao and Avigad, Jeremy and Tetali, Prasad and Chen, Jingbang and Welleck, Sean},
-  journal={Preprint},
+  journal={arXiv preprint arXiv:2610.27046},
   year={2026}
 }
 ```
