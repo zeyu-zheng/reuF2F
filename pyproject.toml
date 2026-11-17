@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reuf2f"
+dynamic = ["version"]
+description = "Task preparation and Comparator evaluation for the reuF2F Lean benchmark"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["typer>=0.20,<1", "PyYAML>=6,<7", "docker>=7.1,<8", "tqdm"]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.scripts]
+reuf2f = "reuf2f.cli.cli:main"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+# The source root itself is the reuf2f package: no src/reuf2f wrapper directory.
+package-dir = {reuf2f = "src"}
+packages = [
+    "reuf2f",
+    "reuf2f.cli",
+    "reuf2f.task",
+    "reuf2f.image_builder",
+    "reuf2f.harness",
+    "reuf2f.harness.constants",
+]
+
+[tool.setuptools.package-data]
+# the Lean checks run from the installed package, so a wheel has to carry them
+"reuf2f.task" = ["*.lean"]
+
+[tool.setuptools.dynamic]
+version = {attr = "reuf2f.__version__"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"

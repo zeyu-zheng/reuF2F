@@ -1,0 +1,12 @@
+.lake/
+.DS_Store
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+logs/
+
+# Local secrets — never commit
+token.txt

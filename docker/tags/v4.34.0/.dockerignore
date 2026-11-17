@@ -1,0 +1,6 @@
+**
+!Dockerfile
+!.dockerignore
+!lakefile.toml
+!lean-toolchain
+!entrypoint.sh
